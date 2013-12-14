@@ -38,10 +38,10 @@ Installation manual
    (b)  Alternatively, if the script is to be hosted by a particular user account, a VirtualHost should be created pointing to the public_html directory of that user. The instructions on creating a VirtualHost can be found in Apache HTTP server manual at http://httpd.apache.org/docs/2.2/vhosts/examples.html. After the VirtualHost is created, the user account must be added to the www-data group, and the group ownership of the public_html directory must be set to www-data, along with the proper permissions.
 This is done by issuing the following commands in order in the terminal:
 
-    cd /home/user/ (where 'user' is the username of the user account)
-    chown -R user.www-data public_html
-    usermod -a -G www-data user
-    chmod 775 public_html
+    cd /home/user/ (where 'user' is the username of the user account) , 
+    chown -R user.www-data public_html , 
+    usermod -a -G www-data user , 
+    chmod 775 public_html , 
 
 Finally the 'webgcc' script folder must be copied into public_html directory.
 
@@ -49,7 +49,7 @@ Finally the 'webgcc' script folder must be copied into public_html directory.
 
 4. Finally the script files should be set with the proper permissions (755). This is done by typing the following commands in order:
 
-    cd webgcc
+    cd webgcc ,
     chmod 755 *
 
 
