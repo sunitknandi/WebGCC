@@ -1,20 +1,25 @@
-<html>
+<!-- Code by Sunit Kumar Nandi -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" script=>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
 <body>
-<form name="form1" method="post" target="output" action="output.php?saving=1">
-Write your program here:
-<br>
-<textarea name="data" cols="80" rows="10">
-</textarea>
-<br><br><br>
-Standard input: <input type="text" name="stdin">
-<br><br>
-Command line arguments: <input type="text" name="args">
-<br><br>
-<input type="submit" value="Run">
-</form>
-<br>
-<a href="textinput.php" target="output">Click here to submit text file input</a>
+	<form name="form1" method="post" target="output" action="output.php?saving=1">
+		<br/><br/>
+		<textarea name="data" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
+		<br/><br/><br/>
+		<input type="text" name="stdin" autocomplete="on" placeholder="Standard input" wrap="hard">
+		<br/><br/>
+		<input type="text" name="args" autocomplete="on" placeholder="Command-line arguments">
+		<br/><br/>
+		<button type="submit">Run</button>
+	</form>
+	<br/>
+	<br/>
+	<a href="textinput.php" target="output">Click here to submit text file input</a>
 </body>
-
 </html>

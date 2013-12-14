@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400|Alegreya+Sans+SC:800);
+body {
+	background-color: #FFFAFA;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+textarea {
+	font-family: "Source Code Pro", sans-serif;
+	color: #272822;
+	background-color: #FFFAFA;
+	resize: none;
+}
+
+p {
+	color: rgba(0, 0, 0, 0.5);
+	font-family: "Helvetica Neue";
+	font-weight: 400;
+	margin: 20px 0; 
+	line-height: 1.6;
+}
+
+button {
+	padding: 13px 72px;
+	font-family: "Alegreya Sans SC", sans-serif;
+}
