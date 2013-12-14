@@ -5,7 +5,7 @@ WebGCC
 Introduction
 ------------
 
-Welcome to my little project called WebGCC, a barebones PHP based web interface for the GNU Compiler Collections.
+Welcome to my little project called WebGCC, a barebones PHP based web interface for the GNU Compiler Collections, that lets you test C and C++ codes online.
 
 
 Features
