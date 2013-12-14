@@ -41,7 +41,7 @@ This is done by issuing the following commands in order in the terminal:
     cd /home/user/ (where 'user' is the username of the user account) , 
     chown -R user.www-data public_html , 
     usermod -a -G www-data user , 
-    chmod 775 public_html , 
+    chmod 775 public_html 
 
 Finally the 'webgcc' script folder must be copied into public_html directory.
 
