@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>	
 
+<!-- Interface page -->
 <head>
 <title>Web interface for GCC compiler</title>
 </head>
 
 
+<!-- Create two horizontal frames of 20% and 80% height -->
 <frameset rows="20%,80%">
- <frame name="header" src="header.html">
-   <frameset cols="60%,40%">
-      <frame name="input" src="input.html">
-      <frame name="output" src="output.php">
-   </frameset>
+<!-- Load the header -->
+<frame name="header" src="header.html">
+<!-- Create two vertical frames of 60% and 40% width -->
+    <frameset cols="60%,40%">
+    <!-- Load the input frame -->
+    <frame name="input" src="input.html">
+    <!-- Load the output frame -->
+    <frame name="output" src="output.php">
+    </frameset>
 </frameset>
 
 

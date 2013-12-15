@@ -1,0 +1,19 @@
+## WebGCC server configuration ##
+
+# Block access to generated text input #
+<Files "*.txt">
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Block access to saved source codes #
+<Files "*.c">
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Block access to executables #
+<Files "*.bin">
+Order Allow,Deny
+Deny from all
+</Files>

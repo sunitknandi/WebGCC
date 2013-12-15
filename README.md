@@ -14,6 +14,7 @@ Features
 * Written in HTML and PHP.
 * Accepts code, standard input, command-line arguments, and text input.
 * Supports multiple execution sessions.
+
 More features will be added soon, like graphics, a nicer code editor and library selection support.
 Feel free to fork my project, modify it and merge the changes back to it.
 
@@ -57,6 +58,13 @@ Usage
 -----
 
 Just open the URL of the interface site. Rest is self-explanatory.
+
+
+Changelog
+---------
+
+* 15 Dec 2013: Fixed output display formatting. Now displays error list only when there is an error/warning. Now executes code only when executable file is present. Better cleanup of session files. Now displays stderr while execution. Added comments and fixed code indentation. Also included a .htaccess file for server security.
+* 14 Dec 2013: First release.
 
 
 More info and discussion

@@ -1,19 +1,25 @@
 <html>
 
 <body>
+<!-- Specifying how the form data should be processed -->
 <form name="form1" method="post" target="output" action="output.php?saving=1">
 Write your program here:
 <br>
+<!-- Accepting program code -->
 <textarea name="data" cols="80" rows="10">
 </textarea>
 <br><br><br>
+<!-- Accepting standard input -->
 Standard input: <input type="text" name="stdin">
 <br><br>
+<!-- Accepting command-line agruments -->
 Command line arguments: <input type="text" name="args">
 <br><br>
+<!-- Submit button goes here -->
 <input type="submit" value="Run">
 </form>
 <br>
+<!-- Provide a link to text input option -->
 <a href="textinput.php" target="output">Click here to submit text file input</a>
 </body>
 
