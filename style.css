@@ -2,6 +2,7 @@
 
 Stylesheet by Akshit Tripathi 
 Fonts by Google Fonts
+Thanks Bootstrap for some code.
 
 */
 
@@ -21,34 +22,56 @@ textarea {
 	border-width: 1px;
 }
 
-textarea:hover {
-	border-color: #6496FF;
-}
-
 p {
 	color: rgba(0, 0, 0, 0.5);
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue";
 	font-weight: 400;
 	margin: 20px 0; 
 	line-height: 1.6;
 }
 
 button {
-	padding: 13px 72px;
+	padding: 12px 48px;
 	font-family: "Alegreya Sans SC", sans-serif;
+	background: linear-gradient (to bottom, #616159 30%, #DEDEDE 70%);
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 12pt;
 }
 
 input {
-	height: 20px;
+	height: 24px;
 	border-radius: 5px;
 	border: solid;
 	border-width: 1px;
+	width: 300px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 input:hover {
 	border-color: #6496FF;
 }
 
-textarea:focus {
-	box-shadow: 2px 2px 2px 2px;
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+button:hover {
+	padding: 13px 72px;
+	font-family: "Alegreya Sans SC", sans-serif;
+	background: linear-gradient (to bottom, #EDEDED 70%, #DEDEDE 30%);
+	color: rgb(0, 0, 0);
 }

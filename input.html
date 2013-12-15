@@ -4,19 +4,20 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8" script=>
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
 	<form name="form1" method="post" target="output" action="output.php?saving=1">
 		<br/><br/>
-		<textarea class="lined" name="data" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
+		<textarea name="data" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
 		<br/><br/><br/>
 		<input type="text" name="stdin" autocomplete="on" placeholder="Standard input" wrap="hard">
 		<br/><br/>
 		<input type="text" name="args" autocomplete="on" placeholder="Command-line arguments">
-		<br/><br/>
-		<button type="submit">Run</button>
+		<br/><hr/><br/>
+		<button type="submit"> &#9654; Run</button>
+		<div style="padding:30px;"><a href="#" class="button">&#9654; Run</a></div>
 	</form>
 	<br/>
 	<br/>
