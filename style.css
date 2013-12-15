@@ -27,7 +27,7 @@ textarea:hover {
 
 p {
 	color: rgba(0, 0, 0, 0.5);
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	margin: 20px 0; 
 	line-height: 1.6;
