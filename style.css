@@ -1,3 +1,10 @@
+/* 
+
+Stylesheet by Akshit Tripathi 
+Fonts by Google Fonts
+
+*/
+
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400|Alegreya+Sans+SC:800);
 body {
 	background-color: #FFFAFA;
@@ -8,8 +15,14 @@ body {
 textarea {
 	font-family: "Source Code Pro", sans-serif;
 	color: #272822;
-	background-color: #FFFAFA;
+	background-color: #FFFFFF;
 	resize: none;
+	border: solid;
+	border-width: 1px;
+}
+
+textarea:hover {
+	border-color: #6496FF;
 }
 
 p {
@@ -23,4 +36,19 @@ p {
 button {
 	padding: 13px 72px;
 	font-family: "Alegreya Sans SC", sans-serif;
+}
+
+input {
+	height: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-width: 1px;
+}
+
+input:hover {
+	border-color: #6496FF;
+}
+
+textarea:focus {
+	box-shadow: 2px 2px 2px 2px;
 }
