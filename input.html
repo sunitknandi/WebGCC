@@ -6,21 +6,36 @@
 <head>
 	<meta charset="utf-8" script=>
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script language="JavaScript" type="text/javascript">
+	$("textarea").keydown(function(e){
+		var $this, end, start, v;
+		if (e.keyCode === 9){
+			start = this.selectionStart;
+			end = this.selectionEnd;
+			$this = $(this);
+			v = $this.val();
+
+			$this.val(v.substring(0,start) 
+					+ "\t"
+					+ v.substring(end));
+			this.selectionStart = this.selectionEnd = start + 1;
+			e.preventDefault();
+            }
+        });
+	</script>
 </head>
 <body>
 	<form name="form1" method="post" target="output" action="output.php?saving=1">
 		<br/><br/>
-		<textarea name="data" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
+		<textarea name="textarea" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
 		<br/><br/><br/>
 		<input type="text" name="stdin" autocomplete="on" placeholder="Standard input" wrap="hard">
 		<br/><br/>
 		<input type="text" name="args" autocomplete="on" placeholder="Command-line arguments">
 		<br/><hr/><br/>
 		<button type="submit"> &#9654; Run</button>
-		<div style="padding:30px;"><a href="#" class="button">&#9654; Run</a></div>
 	</form>
-	<br/>
-	<br/>
-	<a href="textinput.php" target="output">Click here to submit text file input</a>
+	<button href="textinput.php" target="output">Submit text file</button>
+		<!--<div style="padding:30px;"><a href="#" class="button">&#9654; Run</a></div>-->
 </body>
 </html>

@@ -20,6 +20,7 @@ textarea {
 	resize: none;
 	border: solid;
 	border-width: 1px;
+	margin-left: 3px;
 }
 
 p {
@@ -70,7 +71,7 @@ input[type=text]:focus, textarea:focus {
 }
 
 button:hover {
-	padding: 13px 72px;
+	padding: 12px 48px;
 	font-family: "Alegreya Sans SC", sans-serif;
 	background: linear-gradient (to bottom, #EDEDED 70%, #DEDEDE 30%);
 	color: rgb(0, 0, 0);
