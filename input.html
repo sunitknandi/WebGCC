@@ -1,26 +1,26 @@
-<html>
+<!-- Code by Sunit Kumar Nandi -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" script=>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
 <body>
-<!-- Specifying how the form data should be processed -->
-<form name="form1" method="post" target="output" action="output.php?saving=1">
-Write your program here:
-<br>
-<!-- Accepting program code -->
-<textarea name="data" cols="80" rows="10">
-</textarea>
-<br><br><br>
-<!-- Accepting standard input -->
-Standard input: <input type="text" name="stdin">
-<br><br>
-<!-- Accepting command-line agruments -->
-Command line arguments: <input type="text" name="args">
-<br><br>
-<!-- Submit button goes here -->
-<input type="submit" value="Run">
-</form>
-<br>
-<!-- Provide a link to text input option -->
-<a href="textinput.php" target="output">Click here to submit text file input</a>
+	<form name="form1" method="post" target="output" action="output.php?saving=1">
+		<br/><br/>
+		<textarea name="data" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
+		<br/><br/><br/>
+		<input type="text" name="stdin" autocomplete="on" placeholder="Standard input" wrap="hard">
+		<br/><br/>
+		<input type="text" name="args" autocomplete="on" placeholder="Command-line arguments">
+		<br/><hr/><br/>
+		<button type="submit"> &#9654; Run</button>
+		<div style="padding:30px;"><a href="#" class="button">&#9654; Run</a></div>
+	</form>
+	<br/>
+	<br/>
+	<a href="textinput.php" target="output">Click here to submit text file input</a>
 </body>
-
 </html>
