@@ -1,4 +1,15 @@
 <html>
+
+<head>
+<!-- Inserting CodeMirror text editor -->
+<!-- Credit for the idea goes to Aditya Rajan -->
+<link rel="stylesheet" href="assets/codemirror.css">
+<script src="assets/codemirror.js"></script>
+<script src="assets/matchbrackets.js"></script>
+<script src="assets/clike.js"></script>
+<style>.CodeMirror {border: 1px solid #ccc; width:500px; }</style>
+</head>
+
 <body>
 <?php
 $saving = $_REQUEST['saving'];
@@ -22,7 +33,7 @@ if ($saving == 1)
 Write your text here:
 <br>
 <!-- Text box to take text input for program -->
-<textarea name="data" cols="50" rows="10">
+<textarea id="textinput" name="data" cols="50" rows="10">
 This is the file you can use to provide input to your program and later on open it inside your program to process the input.
 </textarea>
 <br>
@@ -34,6 +45,18 @@ This is the file you can use to provide input to your program and later on open 
 <a href="output.php">Click here to close text input</a>
 </form>
 </p>
+
+<script>
+	var editor = CodeMirror.fromTextArea(document.getElementById("textinput"), {
+	lineNumbers: true,
+	matchBrackets: true,
+	closeBrackets: true,
+	lineWrapping: true,
+	tabMode: "indent",
+	indentUnit: 4,
+	mode: "text"
+	});
+</script>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!-- Code by Sunit Kumar Nandi -->
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +26,62 @@
 					insertAtCursor(document.getElementById("text-area"), "	");
 				}
 	    	    };
+=======
+<head>
+<!-- Inserting CodeMirror text editor -->
+<!-- Credit for the idea goes to Aditya Rajan -->
+<link rel="stylesheet" href="assets/codemirror.css">
+<script src="assets/codemirror.js"></script>
+<script src="assets/matchbrackets.js"></script>
+<script src="assets/clike.js"></script>
+<style>.CodeMirror {border: 1px solid #ccc; width:500px; }</style>
+</head>
+
+<body>
+<!-- Specifying how the form data should be processed -->
+<form name="form1" method="post" target="output" action="output.php?saving=1">
+Write your program here:
+<br>
+<!-- Accepting program code -->
+<textarea id="code" name="data" cols="80" rows="10">
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Hello world!";
+	return 0;
+}
+</textarea>
+<br><br>
+<!-- Accepting standard input -->
+Standard input:<br>
+<textarea name="stdin" cols="60" rows="10">
+</textarea>
+<br><br>
+<!-- Accepting command-line agruments -->
+Command line arguments: <input type="text" name="args">
+<br><br>
+<!-- Submit button goes here -->
+<input type="submit" value="Run">
+</form>
+<br>
+<!-- Provide a link to text input option -->
+<a href="textinput.php" target="output">Click here to submit text file input</a>
+
+<script>
+	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+	lineNumbers: true,
+	matchBrackets: true,
+	lineWrapping: true,
+	tabMode: "indent",
+	indentUnit: 4,
+	mode: "text/x-c++src"
+	});
+</script>
+
+</body>
+>>>>>>> 993de84b2fbccdce0b2c1c76291839d38519b9cf
 
 	        	//http://alexking.org/blog/2003/06/02/inserting-at-the-cursor-using-javascript#comment-3817
 	        	function insertAtCursor(myField, myValue) {
