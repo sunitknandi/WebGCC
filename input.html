@@ -1,26 +1,68 @@
-<html>
+<!-- Code by Sunit Kumar Nandi -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" script=>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
 <body>
-<!-- Specifying how the form data should be processed -->
-<form name="form1" method="post" target="output" action="output.php?saving=1">
-Write your program here:
-<br>
-<!-- Accepting program code -->
-<textarea name="data" cols="80" rows="10">
-</textarea>
-<br><br><br>
-<!-- Accepting standard input -->
-Standard input: <input type="text" name="stdin">
-<br><br>
-<!-- Accepting command-line agruments -->
-Command line arguments: <input type="text" name="args">
-<br><br>
-<!-- Submit button goes here -->
-<input type="submit" value="Run">
-</form>
-<br>
-<!-- Provide a link to text input option -->
-<a href="textinput.php" target="output">Click here to submit text file input</a>
-</body>
+	<form name="form1" method="post" target="output" action="output.php?saving=1">
+		<br/><br/>
+		<textarea name="textarea" onfocus="script.js" id="text-area" cols="80" rows="10" placeholder="Write your program here" spellcheck="false"></textarea>
+		<!-- Thanks to Emmet (http://stackoverflow.com/users/2749/emmett) for the tabbing js. -->
+		<script type="text/javascript">
+			document.getElementById("text-area").onkeydown = function(e) {
+				if (!e && event.keyCode == 9)
+				{
+					event.returnValue = false;
+					insertAtCursor(document.getElementById("text-area"), "	");
+				}
+				else if (e.keyCode == 9)
+				{
+					e.preventDefault();
+					insertAtCursor(document.getElementById("text-area"), "	");
+				}
+	    	    };
 
+	        	//http://alexking.org/blog/2003/06/02/inserting-at-the-cursor-using-javascript#comment-3817
+	        	function insertAtCursor(myField, myValue) {
+					//IE support
+					if (document.selection) {
+						var temp;
+						myField.focus();
+						sel = document.selection.createRange();
+						temp = sel.text.length;
+						sel.text = myValue;
+						if (myValue.length == 0) {
+						sel.moveStart('character', myValue.length);
+						sel.moveEnd('character', myValue.length);
+					} else {
+						sel.moveStart('character', -myValue.length + temp);
+					}
+					sel.select();
+					}
+	   	       //MOZILLA/NETSCAPE support
+					else if (myField.selectionStart || myField.selectionStart == '0') {
+						var startPos = myField.selectionStart;
+						var endPos = myField.selectionEnd;
+						myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+						myField.selectionStart = startPos + myValue.length;
+						myField.selectionEnd = startPos + myValue.length;
+					} else {
+						myField.value += myValue;
+				}
+			}
+        </script>
+		<br/><br/><br/>
+		<input type="text" name="stdin" autocomplete="on" placeholder="Standard input" wrap="hard">
+		<br/><br/>
+		<input type="text" name="args" autocomplete="on" placeholder="Command-line arguments">
+		<br/><hr/><br/>
+		<button type="submit"> &#9654; Run</button>
+	</form>
+	<button href="textinput.php" target="output">Submit text file</button>
+		<!--<div style="padding:30px;"><a href="#" class="button">&#9654; Run</a></div>-->
+</body>
 </html>
