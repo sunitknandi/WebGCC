@@ -1,8 +1,11 @@
-<html>
+<!-- Code by Sunit Kumar Nandi -->
 
+<!DOCTYPE html>
 <head>
 <!-- Inserting CodeMirror text editor -->
 <!-- Credit for the idea goes to Aditya Rajan -->
+<meta charset="utf-8" script=>
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="assets/codemirror.css">
 <script src="assets/codemirror.js"></script>
 <script src="assets/matchbrackets.js"></script>
@@ -16,7 +19,7 @@
 Write your program here:
 <br>
 <!-- Accepting program code -->
-<textarea id="code" name="data" cols="80" rows="10">
+<textarea id="code" name="data" cols="100" rows="10">
 #include<iostream>
 using namespace std;
 
@@ -29,18 +32,18 @@ int main()
 <br><br>
 <!-- Accepting standard input -->
 Standard input:<br>
-<textarea name="stdin" cols="60" rows="10">
+<textarea name="stdin" cols="60" rows="10" placeholder="Standard input">
 </textarea>
 <br><br>
 <!-- Accepting command-line agruments -->
-Command line arguments: <input type="text" name="args">
+<input type="text" name="args" placeholder="Command-line arguments">
 <br><br>
 <!-- Submit button goes here -->
-<input type="submit" value="Run">
+<button type="submit">Run</button>
 </form>
 <br>
 <!-- Provide a link to text input option -->
-<a href="textinput.php" target="output">Click here to submit text file input</a>
+<button href="textinput.php" target="output">Submit a text file</button>
 
 <script>
 	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -52,7 +55,5 @@ Command line arguments: <input type="text" name="args">
 	mode: "text/x-c++src"
 	});
 </script>
-
 </body>
-
 </html>
