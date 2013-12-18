@@ -63,6 +63,7 @@ Just open the URL of the interface site. Rest is self-explanatory.
 Changelog
 ---------
 
+* 18 Dec 2013: Merged changes from Akshit Tripathi's fork. New stylesheet added. Updated the placeholders in the input boxes.
 * 16 Dec 2013: Added CodeMirror text editor for line numbers and highlighting (Credits: Aditya Rajan). Changed "Standard input" field into a textarea for taking multi-line input.
 * 15 Dec 2013: Fixed output display formatting. Now displays error list only when there is an error/warning. Now executes code only when executable file is present. Better cleanup of session files. Now displays stderr while execution. Added comments and fixed code indentation. Also included a .htaccess file for server security.
 * 14 Dec 2013: First release.
